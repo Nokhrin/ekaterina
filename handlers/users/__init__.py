@@ -1,3 +1,3 @@
 from . import menu
-from . import user_main
 from . import handbook
+from . import commands_settings

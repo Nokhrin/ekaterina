@@ -5,12 +5,6 @@ from aiogram.dispatcher.filters import Command
 from aiogram.types import Message, BotCommand, BotCommandScopeDefault
 from config import load_config
 
-# delete after testing
-from aiogram.dispatcher.filters import Text
-from aiogram.types import Message, ReplyKeyboardRemove
-from loader import dp
-from keyboards.inline_keyboards.handbook_keyboard import kbd_handbook_level_0
-
 # config = load_config('.env')
 
 ### default settings

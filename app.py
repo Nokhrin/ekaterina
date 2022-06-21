@@ -12,6 +12,7 @@ logger = logging.getLogger(__name__)
 from loader import dp, bot
 
 from handlers.echo import register_echo
+from handlers.users.commands_settings import set_default_commands
 # from handlers.users.menu import show_menu
 
 # register all modules involved
@@ -36,6 +37,9 @@ async def main():
     # dp = Dispatcher(bot)
 
     # register_all_handlers(dp)
+
+    await set_default_commands(bot)
+
 
     # starting bot
     await dp.start_polling()

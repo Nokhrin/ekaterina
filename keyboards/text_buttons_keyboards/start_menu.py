@@ -10,7 +10,10 @@ kbd_main_menu = ReplyKeyboardMarkup(
         [
             KeyboardButton(text='Проживаю'),
             KeyboardButton(text='Не проживаю'),
-        ]
+        ],
+        [
+            KeyboardButton(text='Закрыть меню'),
+        ],
     ],
     resize_keyboard=True
 )

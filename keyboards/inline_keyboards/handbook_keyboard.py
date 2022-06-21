@@ -12,8 +12,8 @@ kbd_handbook_level_0 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='1. Хозяйственное обслуживание',
                 callback_data=handbook_callback.new(
-                    item_name='domestic_services',
-                    chapter_number='0_1'
+                    chapter_number='0_1',
+                    item_name_en='domestic_services',
                 )
             ),
         ],
@@ -21,13 +21,19 @@ kbd_handbook_level_0 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='2. Регистрация',
                 callback_data=handbook_callback.new(
-                    item_name='registration',
-                    chapter_number='0_2'
+                    chapter_number='0_2',
+                    item_name_en='registration',
                 )
             ),
         ],
         [
-            InlineKeyboardButton(text='Отмена', callback_data='cancel')
+            InlineKeyboardButton(
+                text='Отмена',
+                callback_data=handbook_callback.new(
+                    chapter_number='0_0',
+                    item_name_en='cancel',
+                )
+            ),
         ],
     ]
 )
@@ -39,8 +45,9 @@ kbd_handbook_level_0_1 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='1.1. Жилое помещение',
                 callback_data=handbook_callback.new(
-                    item_name='housing',
-                    chapter_number='0_1_1'
+                    chapter_number='0_1_1',
+                    item_name_en='housing',
+
                 )
             ),
         ],
@@ -48,8 +55,8 @@ kbd_handbook_level_0_1 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='1.2. Места общего пользования',
                 callback_data=handbook_callback.new(
-                    item_name='common_areas',
-                    chapter_number='0_1_2'
+                    chapter_number='0_1_2',
+                    item_name_en='common_areas',
                 )
             ),
         ],
@@ -69,8 +76,8 @@ kbd_handbook_level_0_1_1 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='1.1.1. Водоснабжение и канализация',
                 callback_data=handbook_callback.new(
-                    item_name='water_supply',
-                    chapter_number='0_1_1_1'
+                    chapter_number='0_1_1_1',
+                    item_name_en='water_supply',
                 )
             ),
         ],
@@ -78,8 +85,8 @@ kbd_handbook_level_0_1_1 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='1.1.2. Электрика',
                 callback_data=handbook_callback.new(
-                    item_name='electrics',
-                    chapter_number='0_1_1_2'
+                    chapter_number='0_1_1_2',
+                    item_name_en='electrics',
                 )
             ),
         ],
@@ -87,8 +94,8 @@ kbd_handbook_level_0_1_1 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='1.1.3. Перемещение мебели',
                 callback_data=handbook_callback.new(
-                    item_name='furniture_removal',
-                    chapter_number='0_1_1_3'
+                    chapter_number='0_1_1_3',
+                    item_name_en='furniture_removal',
                 )
             ),
         ],
@@ -96,8 +103,8 @@ kbd_handbook_level_0_1_1 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='1.1.4. Другое',
                 callback_data=handbook_callback.new(
-                    item_name='something_else_0_1_1_4',
-                    chapter_number='0_1_1_4'
+                    chapter_number='0_1_1_4',
+                    item_name_en='something_else_0_1_1_4',
                 )
             ),
         ],
@@ -118,8 +125,8 @@ kbd_handbook_level_0_1_2 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='1.2.1. Уборка мест общего пользования',
                 callback_data=handbook_callback.new(
-                    item_name='common_areas_cleaning',
-                    chapter_number='0_1_2_1'
+                    chapter_number='0_1_2_1',
+                    item_name_en='common_areas_cleaning',
                 )
             ),
         ],
@@ -127,8 +134,8 @@ kbd_handbook_level_0_1_2 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='1.2.2. Посторонний предмет',
                 callback_data=handbook_callback.new(
-                    item_name='foreign_object',
-                    chapter_number='0_1_2_2'
+                    chapter_number='0_1_2_2',
+                    item_name_en='foreign_object',
                 )
             ),
         ],
@@ -136,8 +143,8 @@ kbd_handbook_level_0_1_2 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='1.2.3. Другое',
                 callback_data=handbook_callback.new(
-                    item_name='something_else_0_1_2_3',
-                    chapter_number='0_1_2_3'
+                    chapter_number='0_1_2_3',
+                    item_name_en='something_else_0_1_2_3',
                 )
             ),
         ],
@@ -158,8 +165,8 @@ kbd_handbook_level_0_2 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='2.1. Регистрация по месту пребывания',
                 callback_data=handbook_callback.new(
-                    item_name='residence',
-                    chapter_number='0_2_1'
+                    chapter_number='0_2_1',
+                    item_name_en='residence',
                 )
             ),
         ],
@@ -180,8 +187,8 @@ kbd_handbook_level_0_2_1 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='2.1.1. Что необходимо для регистрации',
                 callback_data=handbook_callback.new(
-                    item_name='registration_requirements',
-                    chapter_number='0_2_1_1'
+                    chapter_number='0_2_1_1',
+                    item_name_en='registration_requirements',
                 )
             ),
         ],
@@ -189,8 +196,8 @@ kbd_handbook_level_0_2_1 = InlineKeyboardMarkup(
             InlineKeyboardButton(
                 text='2.1.2. В какие сроки осуществляется регистрация',
                 callback_data=handbook_callback.new(
-                    item_name='registration_time_frames',
-                    chapter_number='0_2_1_2'
+                    chapter_number='0_2_1_2',
+                    item_name_en='registration_time_frames',
                 )
             ),
         ],
