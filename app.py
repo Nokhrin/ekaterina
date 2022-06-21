@@ -4,17 +4,19 @@ import asyncio
 import logging
 logger = logging.getLogger(__name__)
 
+
+## what is better approach: to load variables via loader or load them here - I haven't figured it out yet
 # from aiogram import Bot, Dispatcher
 # from config import load_config
 
-from loader import dp
+from loader import dp, bot
 
 from handlers.echo import register_echo
-from handlers.users.menu import show_menu
+# from handlers.users.menu import show_menu
 
 # register all modules involved
-def register_all_handlers(dp):
-    register_echo(dp)
+# def register_all_handlers(dp):
+#     register_echo(dp)
 
 
 async def main():
@@ -33,7 +35,7 @@ async def main():
     # )
     # dp = Dispatcher(bot)
 
-    register_all_handlers(dp)
+    # register_all_handlers(dp)
 
     # starting bot
     await dp.start_polling()
