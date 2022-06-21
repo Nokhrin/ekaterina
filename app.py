@@ -1,22 +1,20 @@
 # bot starter
 import asyncio
+
 import logging
-
-from aiogram import Bot, Dispatcher
-
-
 logger = logging.getLogger(__name__)
 
-from config import load_config
+# from aiogram import Bot, Dispatcher
+# from config import load_config
+
+from loader import dp
 
 from handlers.echo import register_echo
-
+from handlers.users.menu import show_menu
 
 # register all modules involved
 def register_all_handlers(dp):
     register_echo(dp)
-
-
 
 
 async def main():
@@ -27,13 +25,13 @@ async def main():
     )
     logger.info('Starting bot')
 
-    # configuring bot runner
-    config = load_config('.env')
-    bot = Bot(
-        token=config.tg_bot.token,
-        parse_mode='HTML'
-    )
-    dp = Dispatcher(bot)
+    # # configuring bot runner
+    # config = load_config('.env')
+    # bot = Bot(
+    #     token=config.tg_bot.token,
+    #     parse_mode='HTML'
+    # )
+    # dp = Dispatcher(bot)
 
     register_all_handlers(dp)
 
