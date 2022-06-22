@@ -62,8 +62,11 @@ kbd_handbook_level_0_1 = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text='Отмена',
-                callback_data='cancel'
+                text='Назад',
+                callback_data=handbook_callback.new(
+                    chapter_number='0',
+                    item_name_en='handbook_main',
+                )
             )
         ],
     ],
@@ -110,9 +113,12 @@ kbd_handbook_level_0_1_1 = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text='Отмена',
-                callback_data='cancel'
-            )
+                text='Назад',
+                callback_data=handbook_callback.new(
+                    chapter_number='0_1',
+                    item_name_en='housing',
+                )
+            ),
         ],
     ],
 )
@@ -150,9 +156,12 @@ kbd_handbook_level_0_1_2 = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text='Отмена',
-                callback_data='cancel'
-            )
+                text='Назад',
+                callback_data=handbook_callback.new(
+                    chapter_number='0_1',
+                    item_name_en='common_areas',
+                )
+            ),
         ],
     ],
 )
@@ -172,9 +181,12 @@ kbd_handbook_level_0_2 = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text='Отмена',
-                callback_data='cancel'
-            )
+                text='Назад',
+                callback_data=handbook_callback.new(
+                    chapter_number='0',
+                    item_name_en='handbook_main',
+                )
+            ),
         ],
     ],
 )
@@ -203,9 +215,12 @@ kbd_handbook_level_0_2_1 = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text='Отмена',
-                callback_data='cancel'
-            )
+                text='Назад',
+                callback_data=handbook_callback.new(
+                    chapter_number='0_2',
+                    item_name_en='residence',
+                )
+            ),
         ],
     ],
 )
