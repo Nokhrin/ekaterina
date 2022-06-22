@@ -355,8 +355,15 @@ async def get_cancel(message: Message):
     answer_text = [
         'Закрываю справочник',
         '',
+        'Чтобы открыть справочник, нажмите /handbook',
         'Для просмотра доступных команд нажмите /help',
     ]
+
+    await bot.delete_message(
+        chat_id=message.chat.id,
+        message_id=message.message_id
+    )
+
     await message.answer(
         text='\n'.join(answer_text),
         reply_markup=ReplyKeyboardRemove()
@@ -368,6 +375,7 @@ async def get_cancel(call: CallbackQuery, callback_data: dict):
     answer_text = [
         'Закрываю справочник',
         '',
+        'Чтобы открыть справочник, нажмите /handbook',
         'Для просмотра доступных команд нажмите /help',
     ]
     await call.message.answer(
